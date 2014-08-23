@@ -1,0 +1,6 @@
+<% @perks.each do |p| %>
+<div class="perk" onclick="location='/perks/<%= p.id %>'">
+  <h3 style="name"><%= p.name %></h3>
+  <div style="description"><%= p.description %></div>
+</div>
+<% end %>
