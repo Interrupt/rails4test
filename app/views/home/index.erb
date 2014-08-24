@@ -1,6 +1,15 @@
-<% @perks.each do |p| %>
-<div class="perk" onclick="location='/perks/<%= p.id %>'">
-  <h3 style="name"><%= p.name %></h3>
-  <div style="description"><%= p.description %></div>
+<div class="row main-row">
+  <div class="sidebar large-2 columns">
+    <% @categories.each do |c| %>
+      <a href="/partner_category/<%= c.id %>"><%= c.name %></a>
+    <% end %>
+  </div>
+  <div class="perks large-10 columns">
+    <% @perks.each do |p| %>
+    <div class="perk" onclick="location='/perks/<%= p.id %>'">
+      <h3 style="name"><%= p.name %></h3>
+      <div style="description"><%= p.description %></div>
+    </div>
+    <% end %>
+  </div>
 </div>
-<% end %>

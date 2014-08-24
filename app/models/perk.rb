@@ -4,7 +4,7 @@ class Perk < ActiveRecord::Base
   validates :contact_url, :presence => true
   validates :description, :presence => true
 
-  has_one :partner
+  belongs_to :partner
 
   after_initialize :init
 

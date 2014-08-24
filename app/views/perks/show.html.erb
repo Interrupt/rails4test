@@ -1,34 +1,42 @@
-<p id="notice"><%= notice %></p>
+<div class="row main-row">
+  <div class="sidebar large-2 columns">
+    <% @categories.each do |c| %>
+      <a href="/partner_category/<%= c.id %>"><%= c.name %></a>
+    <% end %>
+  </div>
+  <div class="perks large-10 columns">
+    <% if @perk.partner != nil %>
+      <%= @perk.partner.name %>
+    <% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @perk.name %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @perk.name %>
+    </p>
 
-<p>
-  <strong>Perk url:</strong>
-  <%= @perk.perk_url %>
-</p>
+    <p>
+      <strong>Perk url:</strong>
+      <%= @perk.perk_url %>
+    </p>
 
-<p>
-  <strong>Contact url:</strong>
-  <%= @perk.contact_url %>
-</p>
+    <p>
+      <strong>Contact url:</strong>
+      <%= @perk.contact_url %>
+    </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @perk.description %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @perk.description %>
+    </p>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @perk.rating %>
-</p>
+    <p>
+      <strong>Rating:</strong>
+      <%= @perk.rating %>
+    </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @perk.status %>
-</p>
-
-<%= link_to 'Edit', edit_perk_path(@perk) %> |
-<%= link_to 'Back', perks_path %>
+    <p>
+      <strong>Status:</strong>
+      <%= @perk.status %>
+    </p>
+  </div>
+</div>

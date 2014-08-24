@@ -1,5 +1,5 @@
 class PerksController < ApplicationController
-  before_action :set_perk, only: [:show, :edit, :update, :destroy]
+  before_action :set_perk, only: [:show]
 
   # GET /perks
   # GET /perks.json
@@ -10,6 +10,7 @@ class PerksController < ApplicationController
   # GET /perks/1
   # GET /perks/1.json
   def show
+    @categories = PartnerCategory.all
   end
 
   private
