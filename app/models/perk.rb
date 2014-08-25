@@ -5,6 +5,7 @@ class Perk < ActiveRecord::Base
   validates :description, :presence => true
 
   belongs_to :partner
+  has_many :partner_categories, :through => :partner
 
   after_initialize :init
 

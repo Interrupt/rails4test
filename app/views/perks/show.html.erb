@@ -1,14 +1,10 @@
 <div class="row main-row">
-  <div class="sidebar large-2 columns">
+  <div class="sidebar large-2 small-2 columns">
     <% @categories.each do |c| %>
       <a href="/partner_category/<%= c.id %>"><%= c.name %></a>
     <% end %>
   </div>
-  <div class="perks large-10 columns">
-    <% if @perk.partner != nil %>
-      <%= @perk.partner.name %>
-    <% end %>
-
+  <div class="perks large-10 small-10 columns">
     <p>
       <strong>Name:</strong>
       <%= @perk.name %>

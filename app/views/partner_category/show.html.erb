@@ -1,0 +1,13 @@
+<div class="row main-row">
+  <div class="sidebar large-2 small-2 columns">
+    <% @categories.each do |c| %>
+      <a href="/partner_category/<%= c.id %>"><%= c.name %></a>
+    <% end %>
+  </div>
+  <div class="perks large-10 small-10 columns">
+    <h3><%= @category.name %></h3>
+    <% @category.perks.each do |perk| %>
+      <%= render :partial => "perks/preview", :locals => {:perk => perk} %>
+    <% end %>
+  </div>
+</div>

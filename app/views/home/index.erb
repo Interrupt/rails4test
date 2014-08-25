@@ -1,15 +1,19 @@
 <div class="row main-row">
-  <div class="sidebar large-2 columns">
+  <div class="sidebar large-2 small-2 columns">
     <% @categories.each do |c| %>
       <a href="/partner_category/<%= c.id %>"><%= c.name %></a>
     <% end %>
   </div>
-  <div class="perks large-10 columns">
-    <% @perks.each do |p| %>
-    <div class="perk" onclick="location='/perks/<%= p.id %>'">
-      <h3 style="name"><%= p.name %></h3>
-      <div style="description"><%= p.description %></div>
-    </div>
+  <div class="perks large-10 small-10 columns">
+    <% @perk_categories.each do |category, perks| %>
+      <div class="row">
+        <div class="large-12 small-12 columns">
+        <h3><%= category %></h3>
+        <% perks.each do |perk| %>
+          <%= render :partial => "perks/preview", :locals => {:perk => perk} %>
+        <% end %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

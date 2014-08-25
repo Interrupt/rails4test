@@ -1,11 +1,12 @@
 .header { text-align: center; background-color: #fff; padding: 12px; border-bottom: solid 2px #000; }
 body { font-size: 18px !important; padding: 0px; margin: 0px; }
-.perk { float: left; background-color: #fff; padding: 20px; margin: 10px; width: 30%; }
+.perk { float: left; background-color: #fff; margin: 10px; width: 30%; background-color: #eee; height: 100%;}
 .perk .description { color: #ccc; }
+.perk .content { padding: 20px; }
 .perk .redeem { display: block; margin-top: 20px;}
 .perk { cursor: pointer; border: solid 1px #ccc; min-height: 250px; }
 .sidebar { background-color: #fff; height: 100%; }
 .main-row { height: 100% !important; }
 body { height: 100%; background-color: #eee !important; }
-.perks { background-color: #eee; height: 100%; }
 .perk:hover { border-color: #000; }
+.sidebar a { display: block }
