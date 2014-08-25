@@ -4,8 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 
-# Use postgres as the database
-gem 'pg'
+# Use postgres as the database for production, sqllite for dev
+gem 'sqlite3', group: :development
+gem 'pg', group: :production
+
+#For heroku assets serving
+gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
