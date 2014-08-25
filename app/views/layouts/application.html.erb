@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Railstest</title>
-  <link rel="stylesheet" href="/assets/foundation.css">
-  <script src="/assets/modernizr.js"></script>
+  <link rel="stylesheet" href="<%= asset_path('/assets/foundation.css') %>">
+  <script src="<%= asset_path('/assets/modernizr.js') %>"></script>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

@@ -1,6 +1,6 @@
 <div class="perk large-4 medium-4 small-12 columns" onclick="location='/perks/<%= perk.id %>'">
   <div class="perk-inner">
-    <img src="/assets/cat-icon.jpeg" style="width: 100%;" />
+    <img src="<%= asset_path('/assets/cat-icon.jpeg') %>" style="width: 100%;" />
     <div class="description">
       <h4 style="name"><%= perk.name %></h4>
     </div>
