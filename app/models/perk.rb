@@ -3,7 +3,7 @@ class Perk < ActiveRecord::Base
   validates :perk_url, :presence => true
   validates :contact_url, :presence => true
   validates :description, :presence => true
-  enum status: [ :inactive, :active ]
+  #enum status: [ :inactive, :active ]
 
   belongs_to :partner
   has_many :partner_categories, :through => :partner
