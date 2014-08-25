@@ -1,38 +1,10 @@
-<div class="row main-row">
-  <div class="sidebar large-2 small-2 columns">
-    <% @categories.each do |c| %>
-      <a href="/partner_category/<%= c.id %>"><%= c.name %></a>
-    <% end %>
-  </div>
-  <div class="perks large-10 small-10 columns">
-    <p>
-      <strong>Name:</strong>
-      <%= @perk.name %>
-    </p>
-
-    <p>
-      <strong>Perk url:</strong>
-      <%= @perk.perk_url %>
-    </p>
-
-    <p>
-      <strong>Contact url:</strong>
-      <%= @perk.contact_url %>
-    </p>
-
-    <p>
-      <strong>Description:</strong>
-      <%= @perk.description %>
-    </p>
-
-    <p>
-      <strong>Rating:</strong>
-      <%= @perk.rating %>
-    </p>
-
-    <p>
-      <strong>Status:</strong>
-      <%= @perk.status %>
-    </p>
-  </div>
+<h4><%= @perk.name %></h4>
+<img style="width: 100%;" src="/assets/hero-cat.jpeg" />
+<p></p>
+<div>
+  <a href="<%= @perk.perk_url %>" class="button" />Redeem Now</a>
 </div>
+<hr class="divider" />
+<p>
+  <%= raw @perk.description %>
+</p>

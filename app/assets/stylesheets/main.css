@@ -1,12 +1,21 @@
-.header { text-align: center; background-color: #fff; padding: 12px; border-bottom: solid 2px #000; }
+.header { text-align: center; background-color: #fff; padding: 12px; border-bottom: solid 2px #000; position: fixed; position: absolute; z-index: 2; width: 100%; top: 0; }
 body { font-size: 18px !important; padding: 0px; margin: 0px; }
-.perk { float: left; background-color: #fff; margin: 10px; width: 30%; background-color: #eee; height: 100%;}
-.perk .description { color: #ccc; }
-.perk .content { padding: 20px; }
+.content { max-width: 1000px; padding-top: 70px; margin: auto; }
+
+.perk { height: 100%; margin-bottom: 20px; }
+.perk .description { color: #ccc; padding: 20px; }
 .perk .redeem { display: block; margin-top: 20px;}
-.perk { cursor: pointer; border: solid 1px #ccc; min-height: 250px; }
-.sidebar { background-color: #fff; height: 100%; }
+
+.sidebar { background-color: #fff; height: 100%; padding: 10px; }
+.sidebar a.selected { background-color: #000; color: #fff; }
+
 .main-row { height: 100% !important; }
 body { height: 100%; background-color: #eee !important; }
 .perk:hover { border-color: #000; }
 .sidebar a { display: block }
+
+.perks h3.title { border-bottom: solid 1px #ccc; }
+.inner { background-color: #fff; padding: 10px; float: left; width: 100%; }
+.divider { margin-top: 0px; }
+.perk-inner { border: solid 1px #ccc; background-color: #eee; }
+.perk-inner:hover { cursor: pointer; border-color: #000; }
